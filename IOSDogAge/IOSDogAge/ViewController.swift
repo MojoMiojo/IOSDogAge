@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var ageField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +17,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func discoverAge(_ sender: Any) {
-        resultLabel.text = "Resultado alterado!"
+        
+        if let fieldText = Int(ageField!.text!) {
+            resultLabel.text = "A idade do cachorro em anos humanos é: \(fieldText * 7)"
+        } else {
+            resultLabel.text = "Digite a idade do cachorro"
+        }
+        
     }
-
 }
 
