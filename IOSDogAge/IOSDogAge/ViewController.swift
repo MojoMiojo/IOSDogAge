@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
+        
+        ageField.tintColor = UIColor.brown
     }
 
     @IBAction func discoverAge(_ sender: Any) {
